@@ -23,6 +23,15 @@ router.get('/', (req, res) => {
 
 });
 
+router.post('/save', (req, res) => {
+
+    console.log('Body: ', req.body);
+    res.json({
+        msg: 'We recieved your data!!!!'
+    });
+
+});
+
 router.get('/harmony', (req, res) => {
 
     const data = {
