@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './App.css';
 
 class App extends React.Component{
 
@@ -81,7 +82,7 @@ class App extends React.Component{
 
     if(!posts.length) return null;
     return posts.map((post, index)=>(
-      <div key={index}>
+      <div key={index} className='blog-post-display'>
         <h3>{post.title}</h3>
         <p>{post.body}</p>
       </div>
@@ -94,7 +95,7 @@ class App extends React.Component{
     console.log('State: ', this.state);
     //jsx
     return(
-      <div>
+      <div className='app'>
 
         <h2>Welcome to my App</h2>
         <form onSubmit={this.submit}>
